@@ -22,19 +22,19 @@ The app enable users to get 5 most news articles, search using keywords, and use
 A MongoDB Realm application that pulls global news articles via Data API. The homepage displays the 5 most recent articles and integrates with Charts. Users may also navigate to a search page where they can find articles based on off inputted terms using Atlas Search with autocomplete and fuzzy enabled.
 
 # MongoDB Products/Components/Features:
-Atlas Search
-Charts
-Data API
-App Services - Functions, Http endpointm realm-cli for deployment
-Uses mLocust to demonstrate news metadata at scale
+* Atlas Search
+* Charts
+* Data API
+* App Services - Functions, Http endpointm realm-cli for deployment
+* Uses mLocust to demonstrate news metadata at scale
 
 # Roles and Responsibilities:
-Don Davis - Charts, Search Index
-Duffy Walsh - Data Ingestion, mLocust
-Jeegar Ghodasara - PTO
-Jess May - Data Ingestion
-Paul Brant - Data API
-Rajesh Ramamurthy - Front-end & Integration
+* Don Davis - Charts, Search Index
+* Duffy Walsh - Data Ingestion, mLocust
+* Jeegar Ghodasara - PTO
+* Jess May - Data Ingestion
+* Paul Brant - Data API
+* Rajesh Ramamurthy - Front-end & Integration
 
 # Setup Instructions
 
