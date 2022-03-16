@@ -88,8 +88,11 @@ Rajesh Ramamurthy - Front-end & Integration
 * Write the api-key value down and store is securely.
 * Edit find5news_alerts.js file located under /news-alerts/functions and update 'api-key' under config to the key value that you noted in the previous step.
 
+# Update HTTPS Endpoint URLs
 
-
+* The deployment will create 3 https endpoint and each will be associated with a function.  
+* Click Realm, select the deployed app news-alerts and click HTTPS Endpoints on the left nav bar.
+* Select the function find5new_alerts and copy the httsps end point url.
 
 
 
