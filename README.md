@@ -31,7 +31,7 @@ A MongoDB Realm application that pulls global news articles via Data API. The ho
 # Roles and Responsibilities:
 * Don Davis - Charts, Search Index
 * Duffy Walsh - Data Ingestion, mLocust
-* Jeegar Ghodasara - PTO
+* Jeegar Ghodasara - Not well
 * Jess May - Data Ingestion
 * Paul Brant - Data API
 * Rajesh Ramamurthy - Front-end & Integration
