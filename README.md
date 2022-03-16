@@ -92,8 +92,52 @@ Rajesh Ramamurthy - Front-end & Integration
 
 * The deployment will create 3 https endpoint and each will be associated with a function.  
 * Click Realm, select the deployed app news-alerts and click HTTPS Endpoints on the left nav bar.
-* Select the function find5new_alerts and copy the httsps end point url.
+* Select the function find5new_alerts and copy the https endpoint url.
+* Edit index.html under /hosting/files and paste the copied url inside getTopFiveNews() for url value. 
+* Select the function query and copy the https endpoint url.
+* Edit search.html under /hosting/files and paste the copied url for query_endpoint_url variable.
+* Select the function typeahead and copy the https endpoint url.
+* Edit search.html under /hosting/files and paste the copied url for the URl parameter inside findNews() function.
+* Deploy the application again by running `sh deploy.sh <PUBLIC_KEY> <PRIVATE_KEY> <ATLAS_CLUSTER_NAME>`.
 
+# Execution
+
+__1. Open the index web page__
+
+* Navigate to the __News_alerts__ Realm application
+* In the Realm left-hand navigation menu, select _Hosting_
+* You should see the `index.html` page listed in the table.
+* Copy the URL shown at the top of the hosting page (i.e. for example - news-alerts-eizjt.mongodbstitch.com)
+
+* Open up an incognito browser window, appending `index.html` to the URL
+(__Note__: The _Open In Browser_ menu item only fetches the selected asset and does not preserve the links to the other assets).
+
+![BrowserFullURL](img/browser_full_url.png)
+
+__2. Test out search queries__
+
+Before trying out search queries from the application, create an autocomplete index so that the fields that you intend to query are indexed with the autocomplete data
+type in the collection's index definition. [Autocomplete](https://docs.atlas.mongodb.com/atlas-search/autocomplete/)
+
+Name the index as `ix_autocomplete`. Copy the following index definition and paste it in the JSON editor as shown in the screenshow below and save the index.
+<pre>
+	{
+	"mappings": {
+		"dynamic": false,
+		"fields": {
+		"title": [
+			{
+			"foldDiacritics": false,
+			"maxGrams": 7,
+			"minGrams": 3,
+			"tokenization": "nGram",
+			"type": "autocomplete"
+			}
+		]
+		}
+	}
+	}
+</pre>
 
 
 
