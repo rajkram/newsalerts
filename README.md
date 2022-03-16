@@ -36,12 +36,7 @@ Jess May - Data Ingestion
 Paul Brant - Data API
 Rajesh Ramamurthy - Front-end & Integration
 
-# Demonstration Script
-
-* _setup/installation steps_
-* _step by step instructions on how to give the demonstration_
-* _key points to emphasize at each point in the demonstration_
-* _any tear down steps required to reset the demonstration so it is ready for the next time_
+# Setup Instructions
 
 # Configure Atlas Environment
 
