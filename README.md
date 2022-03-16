@@ -1,6 +1,6 @@
 **Project** : News Alerts  
 **Team Number** : 4  
-**Team Name** : The Dream Team  
+**Team Name** : Team Done Throwing up by 9  
 **Demonstration Video** : 
 
 # Overview
