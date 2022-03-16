@@ -73,7 +73,7 @@
         console.log(searchString);
 
         //let query_endpoint_url = "https://us-east-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/news-alerts-ffebn/service/News-Alerts-Service/incoming_webhook/news-alerts-hook-query";
-        let query_endpoint_url= "https://us-east-1.aws.data.mongodb-api.com/app/news-alerts-ffebn/endpoint/query"
+        let query_endpoint_url= "<PASTE QEURY HTTPS Endpoint URL here>"
         let url = query_endpoint_url + "?arg=" + searchString;
 
         fetch(url)
@@ -124,7 +124,7 @@
             $.ajax(
                 {
                     //url: "https://us-east-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/news-alerts-ffebn/service/News-Alerts-Service/incoming_webhook/news-alerts-hook-typeahead",
-                    url: "https://us-east-1.aws.data.mongodb-api.com/app/news-alerts-ffebn/endpoint/typeahead",
+                    url: "<PASTE TYPEAHEAD HTTPS Endpoint URL here>",
                     type: "GET",
                     data: {
                         arg: q
