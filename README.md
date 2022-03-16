@@ -16,7 +16,7 @@ Moving to the cloud enables efficient scalability, reduces costs, and importantl
 * Scalability
 
 # Detailed Application Overview:
-The app enable users to get top 5 news articles, search using keywords, and use charts for news related statistics. The front end calls an https endpoint to invoke a function that uses data API to pull top 5 recent news articles. It enable users to search for articles based on keywords like 'ukraine', 'inflation' etc.,It also renders some statistics on a dashboard containing different charts.
+The app enable users to get 5 most news articles, search using keywords, and use charts for news related statistics. The front end calls an https endpoint to invoke a function that uses data API to pull 5 most recent news articles. It enable users to search for articles based on keywords like 'ukraine', 'inflation' etc.,It also renders some statistics on a dashboard containing different charts.
 
 # Application Description:
 A MongoDB Realm application that pulls global news articles via Data API. The homepage displays the 5 most recent articles and integrates with Charts. Users may also navigate to a search page where they can find articles based on off inputted terms using Atlas Search with autocomplete and fuzzy enabled.
