@@ -112,8 +112,6 @@ __1. Open the index web page__
 * Open up an incognito browser window, appending `index.html` to the URL
 (__Note__: The _Open In Browser_ menu item only fetches the selected asset and does not preserve the links to the other assets).
 
-![BrowserFullURL](img/browser_full_url.png)
-
 __2. Test out search queries__
 
 Before trying out search queries from the application, create an autocomplete index so that the fields that you intend to query are indexed with the autocomplete data
