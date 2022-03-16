@@ -60,16 +60,34 @@ In the Atlas console, once the dataset has fully loaded, click the Collections b
 
 # Install and Configure Realm CLI Access
 
-In a terminal session on your laptop, run npm install -g mongodb-realm-cli to install the realm-cli.
+* In a terminal session on your laptop, run `npm install -g mongodb-realm-cli` to install the [realm-cli](https://www.npmjs.com/package/mongodb-realm-cli).
+* If you run into a `permission denied` error, you may need to run the following command in order to update permissions for your `node_modules` directory, according to [this help ticket](https://jira.mongodb.org/browse/HELP-12025): `sudo chown -R $USER /usr/local/lib/node_modules`
+* Verify that the `realm-cli` is installed by executing the following command: `realm-cli --version`
+* Back in the Atlas console, click on Access Manager and select Project Access. On that page, navigate to the [API Keys](https://docs.atlas.mongodb.com/configure-api-access/#create-an-api-key-for-a-project) tab to create an API Key for your project and from the top right hand page of the console click Create API Key in order to create a new API Key
+* For the Description field, enter __News Alerts__ and change the Project Permissions to Project Owner, and click Next:
+* Click __Done or Save__.
 
-If you run into a permission denied error, you may need to run the following command in order to update permissions for your node_modules directory, according to this help ticket: sudo chown -R $USER /usr/local/lib/node_modules
+Deploy Realm application__
 
-Verify that the realm-cli is installed by executing the following command: realm-cli --version
+* The exported version of the Realm application exists in the sub-folder `news-alerts`.  In the base folder of this proof, deploy the `news-alerts` application into Realm, in the same project as your Atlas cluster, by running the `deploy.sh` script - execute the script as shown below, first replacing the two parameters with the public & private keys you just saved, and for the 3rd parameter, the name of the Atlas cluster:
 
-Back in the Atlas console, click on Access Manager and select Project Access. On that page, navigate to the API Keys tab to create an API Key for your project and from the top right hand page of the console click Create API Key in order to create a new API Key
+		./deploy.sh <PUBLIC_KEY> <PRIVATE_KEY> <ATLAS_CLUSTER_NAME>
 
-For the Description field, enter News Alerts and change the Project Permissions to Project Owner, and click Next.
-Click Done or Save.
+&nbsp;&nbsp;&nbsp;_Example_:
+
+        ./deploy.sh nrzwypmv ee038461-e4a1-4ab9-950c-35aedf1986g8 TestCluster
+
+* You will first be authenticated to the Realm CLI.  If you already have an existing session running with access to the project, you do not need to de-authenticate the existing session.
+* Select the project name where you have deployed the Atlas cluster.  Hit Enter to choose the project highlighted.
+* Type `y` when prompted with `would you like to create a new app? [y/n]`
+* Press Enter to use the default app name
+* The Realm Runtime currently [works in the following AWS regions](https://docs.mongodb.com/realm/admin/deployment-models-and-regions/#cloud-deployment-regions): Virginia (`US-VA`), Oregon (`US-OR`), Ireland (`IE`), or Sydney (`AU`).  Type in the code for the region closest to your Atlas cluster.
+* Hit Enter to choose [a `LOCAL` deployment](https://docs.mongodb.com/realm/admin/deployment-models-and-regions/#deployment-models), the default configuration for this application.  A `LOCAL` deployment will deploy the Realm application in the specific [cloud region](https://docs.mongodb.com/realm/admin/deployment-models-and-regions/#stitch-regions) specified in the previous step.  Conversely, a `GLOBAL` deployment will host the Realm application in every region that Realm currently supports.
+* Select development for app environment.
+* The `realm-cli` will then import and deploy your application onto the Realm runtime. Note - It will take few minutes to deploy the application.
+
+
+
 
 
 
