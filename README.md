@@ -46,17 +46,12 @@ Rajesh Ramamurthy - Front-end & Integration
 
 # Configure Atlas Environment
 
-Log-on to your Atlas account (using the MongoDB SA preallocated Atlas credits system) and navigate to your SA project
-
-In the project's Security tab, choose to add a new user called main_user, and for User Privileges specify Atlas admin (make a note of the password you specify)
-
-Also in the Security tab, add a new IP Whitelist for your laptop's current IP address
-
-Create an M10 based 3 node replica-set in an AWS region of your choice, running MongoDB version 4.2 (Atlas Full Text Search is only supported in version 4.2. It is available on all cluster sizes.)
-
-Once the cluster has been full provisioned, in the Atlas console, create a new database called 'news-alerts' and a collection called 'articles'. Load the sample data in data.json located under the folder /data.
-
-In the Atlas console, once the dataset has fully loaded, click the Collections button, and navigate to the articles collection. Under the Search tab, choose to Create Search Index. Keep all of the default options and select Create Index.
+* Log-on to your Atlas account (using the MongoDB SA preallocated Atlas credits system) and navigate to your SA project
+* In the project's Security tab, choose to add a new user called main_user, and for User Privileges specify Atlas admin (make a note of the password you specify)
+* Also in the Security tab, add a new IP Whitelist for your laptop's current IP address
+* Create an M10 based 3 node replica-set in an AWS region of your choice, running MongoDB version 4.2 (Atlas Full Text Search is only supported in version 4.2. It is available on all cluster sizes.)
+* Once the cluster has been full provisioned, in the Atlas console, create a new database called 'news-alerts' and a collection called 'articles'. Load the sample data in data.json located under the folder /data.
+* In the Atlas console, once the dataset has fully loaded, click the Collections button, and navigate to the articles collection. Under the Search tab, choose to Create Search Index. Keep all of the default options and select Create Index.
 
 # Install and Configure Realm CLI Access
 
@@ -67,7 +62,7 @@ In the Atlas console, once the dataset has fully loaded, click the Collections b
 * For the Description field, enter __News Alerts__ and change the Project Permissions to Project Owner, and click Next:
 * Click __Done or Save__.
 
-Deploy Realm application__
+# Deploy Realm application__
 
 * The exported version of the Realm application exists in the sub-folder `news-alerts`.  In the base folder of this proof, deploy the `news-alerts` application into Realm, in the same project as your Atlas cluster, by running the `deploy.sh` script - execute the script as shown below, first replacing the two parameters with the public & private keys you just saved, and for the 3rd parameter, the name of the Atlas cluster:
 
@@ -85,6 +80,13 @@ Deploy Realm application__
 * Hit Enter to choose [a `LOCAL` deployment](https://docs.mongodb.com/realm/admin/deployment-models-and-regions/#deployment-models), the default configuration for this application.  A `LOCAL` deployment will deploy the Realm application in the specific [cloud region](https://docs.mongodb.com/realm/admin/deployment-models-and-regions/#stitch-regions) specified in the previous step.  Conversely, a `GLOBAL` deployment will host the Realm application in every region that Realm currently supports.
 * Select development for app environment.
 * The `realm-cli` will then import and deploy your application onto the Realm runtime. Note - It will take few minutes to deploy the application.
+
+# Create Data API Key
+
+* Click Data API on the left nav bar and click Create API Key on the top right corner to create a new key
+* Enter any valid key name and click Generate API Key.
+* Write the api-key value down and store is securely.
+* Edit find5news_alerts.js file located under /news-alerts/functions and update 'api-key' under config to the key value that you noted in the previous step.
 
 
 
