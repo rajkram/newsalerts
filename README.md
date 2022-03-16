@@ -4,7 +4,6 @@
 **Demonstration Video** : 
 
 # Overview
-This News Alert application
 This application accesses recent news alerts according to search terms inputted by the user.
 Both news article titles and summaries are searched to ensure all relevant results. Other useful features include pulling the 5 most recent articles so users can stay updated, as well as a MongoDB Charts integration to visually highlight interesting news trends globally.
 
