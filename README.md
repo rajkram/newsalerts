@@ -13,8 +13,8 @@ Inspiration for this application originated from a Morgan Stanley use case. News
 Moving to the cloud enables efficient scalability, reduces costs, and importantly, allows the business to focus on applications and analytics rather than database maintenance and other non-differentiating tasks.
 
 # Competitive Differentiator Showcase:
-* Developer productivity
-* Scalability
+* __Flexible Data Model__ - The News App aggregates data from different sources. It’s safe to assume the safe of the payloads from those sources will differ, so having a flexible data which can accommodate that variety while at the same time ensuring certain necessary fields are present will be a key difference between MongoDB and other more rigid data stores
+* __Integrated Full Text Search Search__ - Atlas Search - the platform integration of Atlas and Atlas Search removes the need for ETL, any additional cost, latency, or additional cost associated with maintain
 
 # Detailed Application Overview:
 The app enable users to get top 5 news articles, search using keywords, and use charts for news related statistics. The front end calls an https endpoint to invoke a function that uses data API to pull top 5 recent news articles. It enable users to search for articles based on keywords like 'ukraine', 'inflation' etc.,It also renders some statistics on a dashboard containing different charts.
