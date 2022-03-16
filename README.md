@@ -61,9 +61,13 @@ In the Atlas console, once the dataset has fully loaded, click the Collections b
 # Install and Configure Realm CLI Access
 
 In a terminal session on your laptop, run npm install -g mongodb-realm-cli to install the realm-cli.
+
 If you run into a permission denied error, you may need to run the following command in order to update permissions for your node_modules directory, according to this help ticket: sudo chown -R $USER /usr/local/lib/node_modules
+
 Verify that the realm-cli is installed by executing the following command: realm-cli --version
+
 Back in the Atlas console, click on Access Manager and select Project Access. On that page, navigate to the API Keys tab to create an API Key for your project and from the top right hand page of the console click Create API Key in order to create a new API Key
+
 For the Description field, enter News Alerts and change the Project Permissions to Project Owner, and click Next.
 Click Done or Save.
 
