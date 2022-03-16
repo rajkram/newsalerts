@@ -28,7 +28,7 @@ exports = async function(arg){
     headers: {
       'Content-Type': 'application/json',
       'Access-Control-Request-Headers': '*',
-      'api-key': 'NBgkSpu7jH3ToKpWQ25aDFQnFwSL4bjoxeKdl6eVnnBG8OcKsWSuMUpLbT1nPZHs'
+      'api-key': '<data api key>'
     },
     data : data
   };
