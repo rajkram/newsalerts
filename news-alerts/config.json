@@ -1,0 +1,12 @@
+{
+    "config_version": 20200603,
+    "name": "news-alerts",
+    "location": "US-VA",
+    "deployment_model": "LOCAL",
+    "security": {},
+    "hosting": {
+        "enabled": true,
+        "default_error_path": "",
+        "default_error_code": "404"
+    }
+}

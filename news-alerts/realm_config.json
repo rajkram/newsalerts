@@ -1,0 +1,7 @@
+{
+    "config_version": 20210101,
+    "app_id": "news-alerts-ffebn",
+    "name": "news-alerts",
+    "location": "US-VA",
+    "deployment_model": "LOCAL"
+}

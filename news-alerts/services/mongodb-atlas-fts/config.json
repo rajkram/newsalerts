@@ -1,0 +1,10 @@
+{
+    "name": "mongodb-atlas-fts",
+    "type": "mongodb-atlas",
+    "config": {
+        "clusterName":"News-Alerts",
+        "readPreference": "primary",
+        "wireProtocolEnabled": false
+    },
+    "version": 1
+}
